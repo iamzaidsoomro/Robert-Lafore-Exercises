@@ -14,28 +14,34 @@ float product(float x, float y);
 void div(float x, float y);
 
 int main(){
-	float num1, num2;
-	char op;
-	cout << "Enter first number: ";
-	cin >> num1;
-	cout << "Enter second number: ";
-	cin >> num2;
-	cout << "Enter operator: ";
-	cin >> op;
-	switch(op){
-		case '+':
-			cout <<	sum(num1, num2);
-			break;
-		case '-':
-			cout << diff(num1, num2);
-			break;
-		case '*':
-			cout << product(num1, num2);
-			break;
-		case '/':
-			div(num1, num2); // Please don't use cout when calling div() function otherwise output will go against predictions
-			break;
-	}
+	char ch = 'y';
+	while(tolower(ch) == 'y'){
+		float num1, num2;
+		char op;
+		cout << "Enter first number: ";
+		cin >> num1;
+		cout << "Enter second number: ";
+		cin >> num2;
+		cout << "Enter operator: ";
+		cin >> op;
+		switch(op){
+			case '+':
+				cout << "Sum: " << sum(num1, num2);
+				break;
+			case '-':
+				cout << "Difference: " << diff(num1, num2);
+				break;
+			case '*':
+				cout << "Product: " << product(num1, num2);
+				break;
+			case '/':
+				cout << "Division: "; div(num1, num2); // Please don't use cout when calling div() function otherwise output will go against predictions
+				break;
+			default: cout << "Invalid data!";
+		}
+	cout << "\nWould you like to perform it again? (Y/N): ";
+	cin >> ch;
+}
 	return 0;
 }
 
