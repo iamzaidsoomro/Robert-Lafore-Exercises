@@ -8,16 +8,13 @@
 #include <iostream>
 using namespace std;
 
-double power(double numb, int expo);
+double power(double numb, int expo=2);//default argument given(2)
 
 int main(){
 	double number;
-	int exponent;
 	cout << "Enter a number: ";
 	cin >> number;
-	cout << "Enter power: ";
-	cin >> exponent;
-	cout << "Answer = " << power(number, exponent);
+	cout << "Square of your number Answer= " << power(number);
 	return 0;
 }
 
