@@ -11,11 +11,11 @@ struct phone{
 	};
 int main(){
 	phone my,your;//variables of structure
-		cout<<"Enetr areacode of your phone : "; cin>>your.areacode;
+		cout<<"Enter areacode of your phone : "; cin>>your.areacode;
 
-		cout<<"Enetr exchange of your phone : "; cin>>your.exchange;
+		cout<<"Enter exchange of your phone : "; cin>>your.exchange;
 
-		cout<<"Enetr number of your phone : "; cin>>your.number;
+		cout<<"Enter number of your phone : "; cin>>your.number;
 		my.areacode=781;
 		my.exchange=527;
 		my.number=5286;
