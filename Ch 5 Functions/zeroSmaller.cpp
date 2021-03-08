@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int zeroSmaller(int num1, int num2);
-char decor(char x, int iterations);
+void zeroSmaller(int num1, int num2);
+void decor(char x, int iterations);
 
 int main(){
 	int numb1, numb2;
@@ -19,7 +19,7 @@ int main(){
 	return 0;
 }
 
-int zeroSmaller(int num1, int num2){
+void zeroSmaller(int num1, int num2){
 	if(num1 > num2){
 		num2 = 0;
 		cout << "Number A = " << num1 << endl << "Numebr B = " << num2 << endl;
@@ -31,7 +31,7 @@ int zeroSmaller(int num1, int num2){
 	}
 }
 
-char decor(char x, int iterations){
+void decor(char x, int iterations){
 	for(int i = 1; i <= iterations; i++) cout << x;
 	cout << endl;
 }
