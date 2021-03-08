@@ -16,7 +16,7 @@ int main(){
 	cin >> distance1; // This value will be stored in first parameter of result() function
 	cout << "Enter distance #2: ";
 	cin >> distance2; // This value will be stored in the second parameter of result() function
-	cout << result(distance1, distance2); // value of function printed here
+	cout << "\nLargest distance is: " << result(distance1, distance2); // value of function printed here
 }
 
 int result(int first, int second){ // function defined here
