@@ -1,3 +1,10 @@
+/*
+	Book: Robert Lafore
+	Chapter: 5 Functions
+	Exercise: 10
+	Developer: Zaid Soomro (20SW003)
+*/
+
 #include <iostream>
 using namespace std;
 
