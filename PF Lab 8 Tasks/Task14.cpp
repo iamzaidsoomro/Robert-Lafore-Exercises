@@ -20,7 +20,8 @@ string usernames_passwords[total_users][user_data] = { // 2D array storing numbe
     {"iamjerry", "jerry123"},
     {"spike107", "woogiewoogie"},
     {"vaas_00", "insane69"},
-    {"johnnybravo69", "iamjohnny96"}
+    {"johnnybravo69", "iamjohnny96"},
+    {"johnnysins69","iamjohnnybhai"}
     }; // array ends
 string username, password; // for storing user input
 bool check(string username, string password, string array[total_users][user_data]); // Check id & password
