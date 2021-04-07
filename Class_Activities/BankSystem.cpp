@@ -4,9 +4,9 @@ class BankAccount{
 	private:
 		int accno;
 		string customer;
-		int balance;
-		int withdraw;
-		int deposit;
+		float balance;
+		float withdraw;
+		float deposit;
 	public:
 		void CreateAccount(){
 			cout<<"Enter your name: ";
@@ -19,10 +19,10 @@ class BankAccount{
 		void AccountDetails(){
 			cout<<"Name: "<<customer<<endl
 				<<"Account Number: "<<accno<<endl
-				<<"Balance: "<<balance<<endl;
+				<<"Balance: $"<<balance<<endl;
 		}
 		void CheckBalance(){
-			cout<<balance<<endl;
+			cout<<"Current amount: $"<<balance<<endl;
 		}
 		void Withdraw(){
 			cout<<"Enter the amount you want to withdraw: ";
@@ -30,7 +30,7 @@ class BankAccount{
 			if(withdraw <= balance){
 				balance -= withdraw;
 				cout<<'$'<<withdraw<<" withdrawn successfully!"<<endl;
-				cout<<"Your current balance: "<<balance<<endl;
+				cout<<"Your current balance: $"<<balance<<endl;
 			}
 			else{
 				cout<<"Not enough money in your account!"<<endl;
@@ -46,6 +46,7 @@ class BankAccount{
 			}
 			else{
 				cout<<"Deposit can't be less than zero!"<<endl;
+			}
 		}
 };
 int main(){
@@ -54,7 +55,7 @@ int main(){
 	bool condition = true;
 	while(condition == true){
 		char choice;
-		cout<<"What would you like to perform?\n1)Deposit\n2)Withdraw\n3)Account Details\n4)Check Balance\n0)EXIT"<<endl;
+		cout<<"\nWhat would you like to perform?\n1)Deposit\n2)Withdraw\n3)Account Details\n4)Check Balance\n0)EXIT"<<endl;
 		cin>>choice;
 		switch (choice)
 		{
@@ -62,12 +63,23 @@ int main(){
 				condition = false;
 				break;
 			case '1':
+				system("cls");
 				first.Deposit();
 				break;
 			case '2':
+				system("cls");
 				first.Withdraw();
 				break;
+			case '3':
+				system("cls");
+				first.AccountDetails();
+				break;
+			case '4':
+				system("cls");
+				first.CheckBalance();
+				break;
 			default:
+				system("cls");
 				cout<<"Invalid Input!"<<endl;
 				break;
 		}
