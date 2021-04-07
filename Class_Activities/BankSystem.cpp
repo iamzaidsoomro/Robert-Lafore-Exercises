@@ -62,7 +62,7 @@ class BankAccount{
 int main(){
 	BankAccount first; // New Object created of class BankAccount
 	first.CreateAccount();
-	bool condition = true; // Condition set for further use
+	bool condition = true; // Condition set for using in loop
 	while(condition == true){
 		char choice;
 		cout<<"\nWhat would you like to perform?\n1)Deposit\n2)Withdraw\n3)Account Details\n4)Check Balance\n0)EXIT"<<endl;
