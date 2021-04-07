@@ -36,14 +36,17 @@ class BankAccount{
 		void Withdraw(){ // This allows user to withdraw money from his account
 			cout<<"Enter the amount you want to withdraw: ";
 			cin>>withdraw;
-			if(withdraw <= balance){
+			if(withdraw <= balance && withdraw >= 0){
 				balance -= withdraw;
 				cout<<'$'<<withdraw<<" withdrawn successfully!"<<endl;
 				cout<<"Your current balance: $"<<balance<<endl;
 			} // if statement ends
-			else{
+			else if(withdraw > balance){
 				cout<<"Not enough money in your account!"<<endl;
-			} // else statement ends
+			} // else if statement ends
+			else if(withdraw<0){
+				cout<<"Withdrawl amount can't be less than zero!"<<endl;
+			} // else if statement ends
 		} // Withdraw() ends
 		void Deposit(){ // This allows the user to deposit money in his account
 			cout<<"Enter the money you want to deposit: ";
@@ -62,7 +65,7 @@ class BankAccount{
 int main(){
 	BankAccount first; // New Object created of class BankAccount
 	first.CreateAccount();
-	bool condition = true; // Condition set for using in loop
+	bool condition = true; // Condition set for further use
 	while(condition == true){
 		char choice;
 		cout<<"\nWhat would you like to perform?\n1)Deposit\n2)Withdraw\n3)Account Details\n4)Check Balance\n0)EXIT"<<endl;
