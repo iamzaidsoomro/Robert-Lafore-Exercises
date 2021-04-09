@@ -1,16 +1,21 @@
+/*
+    Name: Tea Shop
+    Developer: Zaid Ahmed
+    About: Task was given for practice of OOP by Sir Sajjad Ali in Lab dated 8/4/2021.
+*/
 #include <iostream>
 using namespace std;
 class Tea{
     private:
-        float sugar, water, milk, teadust;
+        float sugar, water, milk, teadust; // data members
     public:
-        void showTea(){
+        void showTea(){ // Will display the contents and their quantities
             cout<<"Sugar = "<<sugar<<"grams"<<endl
                 <<"Water = "<<water<<"grams"<<endl
                 <<"Milk = "<<milk<<"grams"<<endl
                 <<"Teadust = "<<teadust<<"grams"<<endl;
-        }  
-        void makeTea(float sqty, float wqty, float mqty, float tqty){
+        } // showTea() ends
+        void makeTea(float sqty=0, float wqty=0, float mqty=0, float tqty=0){ // Will take the ingredients and will store it in the private data members
             cout<<"Enter sugar grams: ";
             cin>>sqty;
             cout<<"Enter Water grams: ";
@@ -20,21 +25,22 @@ class Tea{
             cout<<"Enter Teadust grams: ";
             cin>>tqty;
             if(sqty >= 0 && wqty >= 0 && mqty >= 0 && tqty >= 0){
+                // values assigned to the data members that were taken from the user
                 sugar = sqty;
                 water = wqty;
                 milk = mqty;
                 teadust = tqty;
-                system("cls");
+                system("cls"); // Will clear the previous junk from the screen
                 showTea();
-                cout<<"\nTea is ready!"
-            }
+                cout<<"\nTea is ready!"<<endl;
+            } // if statement ends
             else{
-                cout<<"Values can't be less than zero!"<<endl;
-            }
-        }
-};
+                cout<<"Values can't be less than zero!"<<endl; // if the values are negative the program will not except it and will print this line
+            } // else statement ends
+        } // makeTea() ends
+}; // Tea ends
 int main(){
-    Tea myTea;
-    myTea.makeTea(6.5,1.7, 8.8, 1.7);
+    Tea myTea; // object myTea created of class Tea
+    myTea.makeTea(); // Function called for making tea
     return 0;
-}
+} // main() ends
